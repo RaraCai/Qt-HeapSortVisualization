@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>760</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidge{
+	background-color: white;
+	border:1px solid #cccccc;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>70</y>
+      <width>930</width>
+      <height>670</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGraphicsView{
+	border:1px solid #cccccc;
+	border-radius:30px;
+	background-color:white;
+}
+QGraphicsView:hover{
+	border:1px solid #ffcc33;
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="titlebar" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1280</width>
+      <height>760</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:none;
+background-color:white;</string>
+    </property>
+    <widget class="QPushButton" name="exitButton">
+     <property name="geometry">
+      <rect>
+       <x>1170</x>
+       <y>20</y>
+       <width>80</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#exitButton {
+    background-color: white; 
+    border: 1px solid #cccccc;
+    border-radius: 15px; 
+    color: #cccccc; 
+    padding: 5px; 
+    font-size: 12px; 
+}
+
+QPushButton#exitButton:hover {
+    background-color: white; 
+	color:#ffcc33;
+	border-color:#ffcc33;
+}
+
+QPushButton#exitButton:pressed {
+    background-color: #E6B82E; /* 按钮被按下时的背景色 */
+	color:#cccccc;
+	border-color:#E6B82E;
+}</string>
+     </property>
+     <property name="text">
+      <string>退出</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>0</y>
+       <width>171</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Black</family>
+       <pointsize>24</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; color:#000000;&quot;&gt;HeapUp!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="profileButton">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>30</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+background-color:transparent;
+border:none;
+icon:url(&quot;:/icon/icon/icon_more_normal.png&quot;);
+icon-size:20px 20px;
+}
+QPushButton:hover{
+icon:url(&quot;:/icon/icon/icon_more_pressed.png&quot;);
+icon-size:20px 20px;
+}
+QPushButton:pressed{
+icon:url(&quot;:/icon/icon/icon_more_pressed.png&quot;);
+icon-size:20px 20px;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>70</y>
+      <width>330</width>
+      <height>690</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:none;
+background-color:white;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+    <widget class="QPlainTextEdit" name="input">
+     <property name="geometry">
+      <rect>
+       <x>29</x>
+       <y>480</y>
+       <width>280</width>
+       <height>100</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPlainTextEdit{
+	border-radius:10px;
+	border: 1px groove #cccccc;
+	color:black;
+	background-color:white;
+	padding-left:5px;
+	padding-right:5px;
+	font:&quot;华文中宋&quot;;
+}
+QPlainTextEdit:focus{
+	border:1px groove #ffcc33;
+}
+QPlainTextEdit:hover{
+	border:1px groove #ffcc33;
+	background-color:white;
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>29</x>
+       <y>50</y>
+       <width>280</width>
+       <height>380</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+	border:1px solid #cccccc;
+	border-radius:15px;
+}
+QLabel:hover{
+	border:1px solid #ffcc33;
+}
+
+</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:19px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#001080;&quot;&gt;   arr&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;[...];&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#0000ff;&quot;&gt;   void &lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#795e26;&quot;&gt;AdjustHeap&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#0000ff;&quot;&gt;int &lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#001080;&quot;&gt;k&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;,&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#0000ff;&quot;&gt;int &lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#001080;&quot;&gt;n&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;){&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#0000ff;&quot;&gt;       int&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt; i&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#000000;&quot;&gt;=&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;k;&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#0000ff;&quot;&gt;       int&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt; j&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#000000;&quot;&gt;=&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#098658;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#000000;&quot;&gt;*&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;i&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#000000;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#098658;&quot;&gt;1&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#af00db;&quot;&gt;       while&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;(j&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#000000;&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;n){&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#af00db;&quot;&gt;           if&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;(j&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#000000;&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;n&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#000000;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#098658;&quot;&gt;1&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#000000;&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#001080;&quot;&gt;arr&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;[j]&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#000000;&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#001080;&quot;&gt;arr&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;[j&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#000000;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#098658;&quot;&gt;1&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;])j&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#000000;&quot;&gt;++&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#af00db;&quot;&gt;           if&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#001080;&quot;&gt;arr&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;[i]&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#000000;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#001080;&quot;&gt;arr&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;[j]) &lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#af00db;&quot;&gt;break&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#af00db;&quot;&gt;           else&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;{&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#795e26;&quot;&gt;               swap&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#001080;&quot;&gt;arr&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;[i],&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#001080;&quot;&gt;arr&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;[j]);&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;               i&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#000000;&quot;&gt;=&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;j;j&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#000000;&quot;&gt;=&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#098658;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#000000;&quot;&gt;*&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;i&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#000000;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#098658;&quot;&gt;1&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;          }&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;       }&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;   }&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#0000ff;&quot;&gt;   void &lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#795e26;&quot;&gt;HeapSort&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#0000ff;&quot;&gt;int &lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#001080;&quot;&gt;n&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;){&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#af00db;&quot;&gt;       for&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#0000ff;&quot;&gt;int&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt; i&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#000000;&quot;&gt;=&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;(n&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#000000;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#098658;&quot;&gt;1&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#000000;&quot;&gt;/&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#098658;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;;i&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#000000;&quot;&gt;&amp;gt;=&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#098658;&quot;&gt;0&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;;i&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#000000;&quot;&gt;--&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#795e26;&quot;&gt;            AdjustHeap&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;(i,n);&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#af00db;&quot;&gt;       for&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#0000ff;&quot;&gt;int&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt; i&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#000000;&quot;&gt;=&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#098658;&quot;&gt;1&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;;i&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#000000;&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;n;i&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#000000;&quot;&gt;++&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;){&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#795e26;&quot;&gt;           swap&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#001080;&quot;&gt;arr&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;[&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#098658;&quot;&gt;0&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;],&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#001080;&quot;&gt;arr&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;[n&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#000000;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;i]);&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#795e26;&quot;&gt;           AdjustHeap&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#098658;&quot;&gt;0&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;,n&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#000000;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;i);&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;       }&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;   }&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#0000ff;&quot;&gt;   int &lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#795e26;&quot;&gt;main&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;(){&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#795e26;&quot;&gt;       HeapSort&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#001080;&quot;&gt;arr&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#795e26;&quot;&gt;size&lt;/span&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;());&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'Consolas','Courier New','monospace'; color:#3b3b3b;&quot;&gt;   }&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>0</y>
+       <width>21</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background:transparent;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/icon/icon/icon_title.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>45</x>
+       <y>4</y>
+       <width>231</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:700;&quot;&gt;What is Heap Sort&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>45</x>
+       <y>21</y>
+       <width>261</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background:transparent;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:8pt; color:#ababab;&quot;&gt;Learn about the code below&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>430</y>
+       <width>21</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background:transparent;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/icon/icon/icon_title.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>45</x>
+       <y>434</y>
+       <width>231</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:700;&quot;&gt;Visualization&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>45</x>
+       <y>451</y>
+       <width>271</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background:transparent;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:8pt; color:#ababab;&quot;&gt;Input your array here, &lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-weight:700; color:#603be6;&quot;&gt;no more than 15 numbers!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="InputOKButton">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>590</y>
+       <width>61</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	border-radius:15px;
+	background-color:white;
+	border: 1px solid #cccccc;
+	color:#cccccc;
+	font: 75 12px &quot;Arial Black&quot;;
+	font-weight:semi-bold;
+}
+QPushButton:hover{
+	background-color:white;
+	border: 1px solid #603be6;
+	color:#603BE6;
+}
+QPushButton:pressed{
+	color:#cccccc;
+	background-color:#41289C;
+	border-color:#41289c;
+}</string>
+     </property>
+     <property name="text">
+      <string>OK</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="buildheapButton">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>590</y>
+       <width>61</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	border-radius:15px;
+	background-color:white;
+	border: 1px solid #cccccc;
+	color:#cccccc;
+	font: 75 12px &quot;微软雅黑&quot;;
+	font-weight:semi-bold;
+}
+QPushButton:hover{
+	background-color:white;
+	border: 1px solid #603be6;
+	color:#603BE6;
+}
+QPushButton:pressed{
+	color:#cccccc;
+	background-color:#41289C;
+	border-color:#41289c;
+}</string>
+     </property>
+     <property name="text">
+      <string>建堆</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>590</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background:transparent;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt; color:#ababab;&quot;&gt;*Eg:1 2 3 &lt;/span&gt;&lt;span style=&quot; font-size:7pt; color:#603be6;&quot;&gt;确保格式、类型(int)正确 &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="sortButton">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>630</y>
+       <width>281</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+    background-color: white; 
+    border: 1px solid #ffcc33;
+    border-radius: 10px; 
+    color: #ffcc33; 
+    padding: 5px; 
+    font-size: 12px; 
+	font-weight:bold;
+}
+
+QPushButton:hover {
+    background-color: #ffcc33; 
+	color:white;
+	border-color:#ffcc33;
+}
+
+QPushButton:pressed {
+    background-color: #E6B82E; /* 按钮被按下时的背景色 */
+	color:#cccccc;
+	border-color:#E6B82E;
+}</string>
+     </property>
+     <property name="text">
+      <string>Sort！</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>100</y>
+      <width>231</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:700;&quot;&gt;Sort Result&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="play">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>680</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+    background-color: white; 
+    border: 1px solid #cccccc;
+    border-radius: 15px; 
+    color: #cccccc; 
+    icon:url(&quot;:/icon/icon/icon_play_normal.png&quot;);
+	icon-size:24px 24px;
+}
+
+QPushButton:hover {
+	color:#ffcc33;
+	border-color:#ffcc33;
+icon:url(&quot;:/icon/icon/icon_play_pressed.png&quot;);
+icon-size:24px 24px;
+}
+
+QPushButton:pressed {
+	color:#ffcc33;
+	border-color:#ffcc33;
+icon:url(&quot;:/icon/icon/icon_play_pressed.png&quot;);
+icon-size:24px 24px;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pause">
+    <property name="geometry">
+     <rect>
+      <x>1200</x>
+      <y>680</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+    background-color: white; 
+    border: 1px solid #cccccc;
+    border-radius: 15px; 
+    color: #cccccc; 
+    icon:url(&quot;:/icon/icon/icon_pause_normal.png&quot;);
+	icon-size:24px 24px;
+}
+
+QPushButton:hover {
+	color:#ffcc33;
+	border-color:#ffcc33;
+	icon:url(&quot;:/icon/icon/icon_pause_pressed.png&quot;);
+	icon-size:24px 24px;
+}
+
+QPushButton:pressed {
+	color:#ffcc33;
+	border-color:#ffcc33;
+	icon:url(&quot;:/icon/icon/icon_pause_pressed.png&quot;);
+	icon-size:24px 24px;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="statusicon">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>390</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>titlebar</zorder>
+   <zorder>graphicsView</zorder>
+   <zorder>frame</zorder>
+   <zorder>label_10</zorder>
+   <zorder>play</zorder>
+   <zorder>pause</zorder>
+   <zorder>statusicon</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

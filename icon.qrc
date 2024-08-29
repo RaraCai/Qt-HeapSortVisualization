@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>icon/icon_back_normal.png</file>
+        <file>icon/icon_back_pressed.png</file>
+        <file>icon/icon_more_normal.png</file>
+        <file>icon/icon_more_pressed.png</file>
+        <file>icon/profile.png</file>
+        <file>icon/icon_title.png</file>
+        <file>icon/icon_pause_normal.png</file>
+        <file>icon/icon_pause_pressed.png</file>
+        <file>icon/icon_play_normal.png</file>
+        <file>icon/icon_play_pressed.png</file>
+        <file>icon/app_icon.png</file>
+    </qresource>
+</RCC>
