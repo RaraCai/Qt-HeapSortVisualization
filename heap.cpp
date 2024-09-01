@@ -276,3 +276,11 @@ void heap::AnimationPause(){
         this->pauseloop->exec();
     }
 }
+
+bool heap::isLoopRunning(){
+    return this->loop->isRunning();
+}
+bool heap::isPauseLoopRunning(){
+    return this->pauseloop->isRunning();
+}
+

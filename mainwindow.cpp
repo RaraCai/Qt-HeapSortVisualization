@@ -70,6 +70,10 @@ void MainWindow::on_profileButton_clicked()
 
 void MainWindow::on_InputOKButton_clicked()
 {
+    //若当前循环事件正在运行，按键无效
+    if(this->Heap->isLoopRunning())
+        return;
+
     //检查输入内容是否合法：只包含数字和空格
     QString input_str=ui->input->toPlainText().trimmed();
     bool valid=true;
@@ -108,6 +112,10 @@ void MainWindow::on_InputOKButton_clicked()
 
 void MainWindow::on_buildheapButton_clicked()
 {
+    //若当前循环事件正在运行，按键无效
+    if(this->Heap->isLoopRunning())
+        return;
+
     if(Heap->isreadytoBuild()){
         this->Heap->renderNodes(this->Heap->getArraySize());
         this->Heap->renderArray(this->Heap->getArraySize());
@@ -120,6 +128,10 @@ void MainWindow::on_buildheapButton_clicked()
 
 void MainWindow::on_sortButton_clicked()
 {
+    //若当前循环事件正在运行，按键无效
+    if(this->Heap->isLoopRunning())
+        return;
+
     if(Heap->isreadytoBuild() && Heap->isreadytoSort()){
         Heap->HeapSort();
         //提示排序结束
@@ -137,6 +149,10 @@ void MainWindow::on_sortButton_clicked()
 
 void MainWindow::on_play_clicked()
 {
+    //不在pauseloop说明动画正常执行中，不用其他操作
+    if(!this->Heap->isPauseLoopRunning())
+        return;
+
     if(this->Heap->isreadytoBuild() && this->Heap->isreadytoSort()){
         QLabel* icon=ui->statusicon;
         icon->setPixmap(QPixmap());
@@ -156,6 +172,10 @@ void MainWindow::on_play_clicked()
 
 void MainWindow::on_pause_clicked()
 {
+    //在pauseloop说明动画已经被暂停，不用其他操作
+    if(this->Heap->isPauseLoopRunning())
+        return;
+
     if(this->Heap->isreadytoBuild() && this->Heap->isreadytoSort()){
         QLabel* icon=ui->statusicon;
         icon->setScaledContents(true);

@@ -38,6 +38,8 @@ public:
 
     bool isreadytoBuild();                      //返回能否建堆
     bool isreadytoSort();                       //返回能否排序
+    bool isLoopRunning();                       //返回主事件循环状态
+    bool isPauseLoopRunning();                  //返回暂停事件循环状态
 
     void renderNodes(int k);                    //前端渲染前k个二叉树结点
     void renderSwap(int swap1,int swap2);       //前端渲染下标分别为swap1和swap2的结点的交换过程
